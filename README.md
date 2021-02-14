@@ -141,6 +141,19 @@ npm cache clean && npm install
 npm run serve
 ```
 
+Output:
+
+```
+npm run serve
+
+> redis-shopping-cart-client@1.0.0 serve
+> vue-cli-service serve
+
+ INFO  Starting development server...
+40% building 19/28 modules 9 active .../cl
+```
+
+
 ## Deployment
 
 To make deploys work, you need to create free account in https://redislabs.com/try-free/, create Redis instance with `RedisJson` module and get informations - REDIS_ENDPOINT_URI and REDIS_PASSWORD. You must pass them as environmental variables.

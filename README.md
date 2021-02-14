@@ -62,13 +62,26 @@ REDIS_PASSWORD: Redis password (default: demo)
 
 docker network create global
 docker-compose up -d --build
+```
+
+The output should display:
+
+```
+docker-compose ps
+             Name                           Command               State             Ports          
+---------------------------------------------------------------------------------------------------
+redis.redisshoppingcart.docker   docker-entrypoint.sh redis ...   Up      127.0.0.1:55000->6379/tcp
+```
 
 # Install dependencies
 
+```
 npm cache clean && npm install
+```
 
 # Run dev server
 
+```
 npm run dev
 ```
 

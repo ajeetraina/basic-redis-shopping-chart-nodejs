@@ -151,6 +151,17 @@ npm run serve
 
  INFO  Starting development server...
 40% building 19/28 modules 9 active .../cl
+
+DONE  Compiled successfully in 12956ms                                                                                                                             9:57:52 PM
+
+
+  App running at:
+  - Local:   http://localhost:8081/ 
+  - Network: http://192.168.1.5:8081/
+
+  Note that the development build is not optimized.
+  To create a production build, run npm run build.
+  
 ```
 
 

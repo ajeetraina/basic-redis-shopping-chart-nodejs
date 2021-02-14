@@ -73,6 +73,22 @@ docker-compose ps
 redis.redisshoppingcart.docker   docker-entrypoint.sh redis ...   Up      127.0.0.1:55000->6379/tcp
 ```
 
+```
+% docker-compose logs -f
+Attaching to redis.redisshoppingcart.docker
+redis.redisshoppingcart.docker | 1:C 14 Feb 2021 15:39:02.178 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis.redisshoppingcart.docker | 1:C 14 Feb 2021 15:39:02.178 # Redis version=6.0.9, bits=64, commit=00000000, modified=0, pid=1, just started
+redis.redisshoppingcart.docker | 1:C 14 Feb 2021 15:39:02.178 # Configuration loaded
+redis.redisshoppingcart.docker | 1:M 14 Feb 2021 15:39:02.179 * Running mode=standalone, port=6379.
+redis.redisshoppingcart.docker | 1:M 14 Feb 2021 15:39:02.179 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+redis.redisshoppingcart.docker | 1:M 14 Feb 2021 15:39:02.179 # Server initialized
+redis.redisshoppingcart.docker | 1:M 14 Feb 2021 15:39:02.179 # <ReJSON> JSON data type for Redis v1.0.7 [encver 0]
+redis.redisshoppingcart.docker | 1:M 14 Feb 2021 15:39:02.179 * Module 'ReJSON' loaded from /usr/lib/redis/modules/rejson.so
+redis.redisshoppingcart.docker | 1:M 14 Feb 2021 15:39:02.180 * Ready to accept connections
+```
+
+
+
 # Install dependencies
 
 ```

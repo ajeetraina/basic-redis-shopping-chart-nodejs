@@ -157,3 +157,55 @@ Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run/?git_repo=
 ### Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/redis-developer/basic-redis-shopping-chart-nodejs&env=REDIS_ENDPOINT_URI,REDIS_PASSWORD)
+
+# Troubleshooting
+
+If you encounter the below issue while running ```npm run serve```
+
+```
+npm ERR! As of npm@5, the npm cache self-heals from corruption issues
+npm ERR! by treating integrity mismatches as cache misses.  As a result,
+npm ERR! data extracted from the cache is guaranteed to be valid.  If you
+npm ERR! want to make sure everything is consistent, use `npm cache verify`
+npm ERR! instead.  Deleting the cache can only make npm go slower, and is
+npm ERR! not likely to correct any problems you may be encountering!
+npm ERR! 
+npm ERR! On the other hand, if you're debugging an issue with the installer,
+npm ERR! or race conditions that depend on the timing of writing to an empty
+npm ERR! cache, you can use `npm install --cache /tmp/empty-cache` to use a
+npm ERR! temporary cache instead of nuking the actual one.
+npm ERR! 
+npm ERR! If you're sure you want to delete the entire cache, rerun this command
+npm ERR! with --force.
+```
+
+Here's a fix:
+
+
+
+```
+npm cache clean --force && npm install --legacy-peer-deps
+npm WARN using --force Recommended protections disabled.
+npm WARN deprecated fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated @hapi/topo@3.1.6: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated @hapi/bourne@1.3.2: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated @hapi/address@2.1.4: Moved to 'npm install @sideway/address'
+npm WARN deprecated @hapi/hoek@8.5.1: This version has been deprecated and is no longer supported or maintained
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated @hapi/joi@15.1.1: Switch to 'npm install joi'
+npm WARN deprecated fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+npm WARN deprecated eslint-loader@2.2.1: This loader has been deprecated. Please use eslint-webpack-plugin
+npm WARN deprecated babel-eslint@10.1.0: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
+
+added 1383 packages, and audited 1384 packages in 1m
+
+76 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+```

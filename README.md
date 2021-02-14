@@ -101,6 +101,30 @@ npm cache clean && npm install
 npm run dev
 ```
 
+```
+redis-cli
+127.0.0.1:6379> info modules
+NOAUTH Authentication required.
+127.0.0.1:6379> auth demo
+OK
+127.0.0.1:6379> info modules
+# Modules
+module:name=ReJSON,ver=10007,api=1,filters=0,usedby=[],using=[],options=[]
+127.0.0.1:6379> exit
+ajeetraina@Ajeets-MacBook-Pro server % npm run dev
+
+> redis-shopping-cart-backend@1.0.0 dev
+> nodemon src/index.js
+
+[nodemon] 2.0.7
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/index.js`
+App listening on port 3000
+```
+
+
 Go to client folder and then:
 
 ```

@@ -26,7 +26,23 @@ This shopping cart is using Redis and RedisJson module functionalities, allowing
 ### Prerequisites
 
 - Node - v12.19.0
+
+```
+% brew install node
+```
+
+```
+node 15.5.0 is already installed
+```
+
 - NPM - v6.14.8
+
+```
+ % npm version
+{
+  npm: '7.3.0',
+```
+
 - Docker - v19.03.13 (optional)
 
 ### Local installation
